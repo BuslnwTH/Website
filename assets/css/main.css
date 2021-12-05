@@ -3601,10 +3601,10 @@ input, select, textarea {
 		}
 
 			#banner h2:before, #banner h2:after {
-				-moz-transition: width 0.85s ease;
-				-webkit-transition: width 0.85s ease;
-				-ms-transition: width 0.85s ease;
-				transition: width 0.85s ease;
+				-moz-transition: width 0.5s ease;
+				-webkit-transition: width 0.5s ease;
+				-ms-transition: width 0.5s ease;
+				transition: width 0.5s ease;
 				-moz-transition-delay: 0.25s;
 				-webkit-transition-delay: 0.25s;
 				-ms-transition-delay: 0.25s;
