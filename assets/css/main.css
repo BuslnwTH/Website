@@ -7,6 +7,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -23,7 +24,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+    word-wrap:break-word;}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -77,6 +79,7 @@ img{
 	width: auto\9; 
 	width:100%;
 }
+
 /* Basic */
 
 	@-ms-viewport {
@@ -3521,9 +3524,29 @@ img{
 							position: relative;
 						}
 
+						#header nav > ul > li > a.menuToggle1 {
+							outline: 0;
+							position: relative;
+						}	
+
+						#header nav > ul > li > a.menuToggle2 {
+							outline: 0;
+							position: relative;
+						}
+
+						#header nav > ul > li > a.menuToggle3 {
+							outline: 0;
+							position: relative;
+						}
+
+						#header nav > ul > li > a.menuToggle4 {
+							outline: 0;
+							position: relative;
+						}
+
 							#header nav > ul > li > a.menuToggle:after {
 								background-image: url("images/bars.svg");
-								background-position: right center;
+								background-position: right;
 								background-repeat: no-repeat;
 								content: '';
 								display: inline-block;
@@ -3532,16 +3555,89 @@ img{
 								width: 2em;
 							}
 
+							#header nav > ul > li > a.menuToggle1:after {
+								background-image: url("images/home.svg");
+								background-position: center;
+								background-repeat: no-repeat;
+								content: '';
+								display: inline-block;
+								height: 3.75em;
+								vertical-align: top;
+								width: 2em;
+							}
+
+							#header nav > ul > li > a.menuToggle2:after {
+								background-image: url("images/github-brands.svg");
+								background-position: center;
+								background-repeat: no-repeat;
+								content: '';
+								display: inline-block;
+								height: 3.75em;
+								vertical-align: top;
+								width: 2em;
+							}
+
+							#header nav > ul > li > a.menuToggle3:after {
+								background-image: url("images/discord-brands.svg");
+								background-position: center;
+								background-repeat: no-repeat;
+								content: '';
+								display: inline-block;
+								height: 3.75em;
+								vertical-align: top;
+								width: 2em;
+							}
+
+							#header nav > ul > li > a.menuToggle4:after {
+								background-image: url("images/telegram-plane-brands.svg");
+								background-position: center;
+								background-repeat: no-repeat;
+								content: '';
+								display: inline-block;
+								height: 3.75em;
+								vertical-align: top;
+								width: 2em;
+							}
 							@media screen and (max-width: 736px) {
 
 								#header nav > ul > li > a.menuToggle {
 									padding: 0 1.5em;
 								}
 
+								#header nav > ul > li > a.menuToggle1 {
+									padding: 0 1.5em;
+								}
+
+								#header nav > ul > li > a.menuToggle2 {
+									padding: 0 1.5em;
+								}
+
+								#header nav > ul > li > a.menuToggle3 {
+									padding: 0 1.5em;
+								}
+
+								#header nav > ul > li > a.menuToggle4 {
+									padding: 0 1.5em;
+								}
 									#header nav > ul > li > a.menuToggle span {
 										display: none;
 									}
 
+									#header nav > ul > li > a.menuToggle1 span {
+										display: none;
+									}
+
+									#header nav > ul > li > a.menuToggle2 span {
+										display: none;
+									}
+
+									#header nav > ul > li > a.menuToggle3 span {
+										display: none;
+									}
+
+									#header nav > ul > li > a.menuToggle4 span {
+										display: none;
+									}
 							}
 
 						@media screen and (max-width: 736px) {

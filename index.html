@@ -8,8 +8,21 @@
 	<head>
 		<title>LiteLoaderBDS</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="bootstrap.min.css" rel="stylesheet">  
+		<style type="text/css">
+    	.nav-logo{
+    		float: left;
+		    height: 40px;
+		    margin-top: 5px;
+		    overflow: hidden;
+    	}
+    	.nav-logo a{
+    		margin: 0;
+    		padding: 0;
+    	}
+		 </style>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="landing is-preload">
@@ -21,18 +34,18 @@
 					<header id="header" class="alt">
 						<h1><a href="index.html">LiteLoaderBDS</a></h1>
 						<nav id="nav">
-							<ul>
+							<ul>									
 								<li class="special">								
-									<a href="https://forum.litebds.com/" class="fas fa-home"><span>Forum</span></a>
+									<a href="https://forum.litebds.com/" class="menuToggle1"><span>Forum</span></a>
 								</li>
 								<li class="special">								
-									<a href="https://github.com/LiteLDev/LiteLoaderBDS" class="fab fa-github"><span>GitHub</span></a>
+									<a href="https://github.com/LiteLDev/LiteLoaderBDS"class="menuToggle2"><span>GitHub</span></a>
 								</li>
 								<li class="special">								
-									<a href="https://discord.gg/27KTrxHc9t" class="fab fa-discord"><span>Discord</span></a>
+									<a href="https://discord.gg/27KTrxHc9t"class="menuToggle3"><span>Discord</span></a>
 								</li>
 								<li class="special">								
-									<a href="https://t.me/liteloader" class="fab fa-telegram"><span>Telegarm</span></a>
+									<a href="https://t.me/liteloader" class="menuToggle4"><span>Telegarm</span></a>
 								</li>
 								<li class="special">
 									<a href="#menu" class="menuToggle"><span>Language</span></a>
@@ -46,13 +59,14 @@
 								</li>
 							</ul>
 						</nav>
+						
 					</header>
 
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">							
 							<h2><div class="image"><img src="images/LiteLoaderBDS.png" alt="" /></div><div class="content"></h2>
-							<p style="font-size:20px">A New Era <br />
+							<p style="font-size:1.25rem">A New Era <br />
 								Bedrock Dedicated Server<br />
 								Plugin Loader <br /></p>
 							<ul class="actions special">
