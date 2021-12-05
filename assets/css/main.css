@@ -27,6 +27,7 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;
     word-wrap:break-word;}
 
+	
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -61,6 +62,7 @@ mark {
 	background-color: transparent;
 	color: inherit;
 }
+
 
 input::-moz-focus-inner {
 	border: 0;
