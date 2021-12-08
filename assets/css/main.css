@@ -148,6 +148,11 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
+img{
+	height: auto; 
+	width: auto\9; 
+	width:100%;
+}
 input,
 select,
 textarea {
@@ -2974,21 +2979,118 @@ body.is-menu-visible #menu {
   outline: 0;
   position: relative;
 }
+#header nav > ul > li > a.forumToggle {
+  outline: 0;
+  position: relative;
+}	
+
+#header nav > ul > li > a.githubToggle {
+  outline: 0;
+  position: relative;
+}
+
+#header nav > ul > li > a.discordToggle {
+  outline: 0;
+  position: relative;
+}
+
+#header nav > ul > li > a.TelegarmToggle {
+  outline: 0;
+  position: relative;
+}
+
 #header nav > ul > li > a.menuToggle:after {
   background-image: url("images/bars.svg");
   background-position: right center;
   background-repeat: no-repeat;
   content: "";
+  display: inline-flex;
+  height: 3.75em;
+  vertical-align: top;
+  width: 1.75em;
+}
+
+#header nav > ul > li > a.forumToggle:after {
+  background-image: url("images/home.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 3.5em;
+  vertical-align: top;
+  width: 1.75em;
+}
+
+#header nav > ul > li > a.githubToggle:after {
+  background-image: url("images/github-brands.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 3.5em;
+  vertical-align: top;
+  width: 1.75em;
+}
+
+#header nav > ul > li > a.discordToggle:after {
+  background-image: url("images/discord-brands.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  height: 3.5em;
+  vertical-align: top;
+  width: 1.75em;
+}
+
+#header nav > ul > li > a.TelegarmToggle:after {
+  background-image: url("images/telegram-plane-brands.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  content: '';
   display: inline-block;
   height: 3.75em;
   vertical-align: top;
-  width: 2em;
+  width: 1.75em;
 }
+
 @media screen and (max-width: 736px) {
   #header nav > ul > li > a.menuToggle {
     padding: 0 1.5em;
   }
+  #header nav > ul > li > a.forumToggle {
+    padding: 0 1.5em;
+  }
+
+  #header nav > ul > li > a.githubToggle {
+    padding: 0 1.5em;
+  }
+
+  #header nav > ul > li > a.discordToggle {
+    padding: 0 1.5em;
+  }
+
+  #header nav > ul > li > a.TelegarmToggle {
+    padding: 0 1.5em;
+  }
+  
   #header nav > ul > li > a.menuToggle span {
+    display: none;
+  }
+
+  #header nav > ul > li > a.forumToggle span {
+    display: none;
+  }
+
+  #header nav > ul > li > a.githubToggle span {
+    display: none;
+  }
+
+  #header nav > ul > li > a.discordToggle span {
+    display: none;
+  }
+
+  #header nav > ul > li > a.TelegarmToggle span {
     display: none;
   }
 }
@@ -3045,17 +3147,18 @@ body.is-menu-visible #menu {
   position: relative;
   z-index: 1;
 }
+
 #banner h2:before, #banner h2:after {
-  -moz-transition: width 0.85s ease;
-  -webkit-transition: width 0.85s ease;
-  -ms-transition: width 0.85s ease;
-  transition: width 0.85s ease;
+  -moz-transition: width 0.6s ease;
+  -webkit-transition: width 0.6s ease;
+  -ms-transition: width 0.6s ease;
+  transition: width 0.6s ease;
   -moz-transition-delay: 0.25s;
   -webkit-transition-delay: 0.25s;
   -ms-transition-delay: 0.25s;
   transition-delay: 0.25s;
   background: #fff;
-  content: "";
+  content: '';
   display: block;
   height: 2px;
   position: absolute;
@@ -3122,15 +3225,15 @@ body.is-menu-visible #menu {
 }
 #banner:after {
   pointer-events: none;
-  -moz-transition: opacity 3s ease-in-out;
-  -webkit-transition: opacity 3s ease-in-out;
-  -ms-transition: opacity 3s ease-in-out;
-  transition: opacity 3s ease-in-out;
-  -moz-transition-delay: 1.25s;
-  -webkit-transition-delay: 1.25s;
-  -ms-transition-delay: 1.25s;
-  transition-delay: 1.25s;
-  content: "";
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  -moz-transition-delay: 0.5s;
+  -webkit-transition-delay:  0.5s;
+  -ms-transition-delay: 0.5s;
+  transition-delay:  0.5s;
+  content: '';
   background: #2e3842;
   display: block;
   width: 100%;
