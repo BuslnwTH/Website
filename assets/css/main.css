@@ -1892,6 +1892,19 @@ ul.actions.special {
 ul.actions.special li:first-child {
   padding-left: 0;
 }
+
+ul.actions.test {
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-left: 1;
+}
+ul.actions.test li:first-child {
+  padding-left: 0;
+}
+
 ul.actions.stacked {
   -moz-flex-direction: column;
   -webkit-flex-direction: column;
@@ -2079,7 +2092,7 @@ button,
   padding: 0 2.75em;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: none;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2149,6 +2162,28 @@ button.primary:active,
 .button.primary:active {
   background-color: #eb341c !important;
 }
+
+button.ll,
+.button.ll {
+  background-color: #2EF05F;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+input[type=submit].ll:hover,
+input[type=reset].ll:hover,
+input[type=button].ll:hover,
+button.ll:hover,
+.button.ll:hover {
+  background-color: #2EF05F !important;
+}
+input[type=submit].ll:active,
+input[type=reset].ll:active,
+input[type=button].ll:active,
+button.ll:active,
+.button.ll:active {
+  background-color: #2EF05F !important;
+}
+
 input[type=submit].disabled, input[type=submit]:disabled,
 input[type=reset].disabled,
 input[type=reset]:disabled,
@@ -3477,3 +3512,45 @@ body.is-mobile.landing .wrapper.style4 {
 body.is-mobile.landing #footer {
   background-color: #1d242a;
 }
+
+.box-counter {
+	padding: 2px 1px;
+	position: relative;
+	text-align: center;
+	font-weight: 700;
+	color: #2e3844;
+	transition: .3s;
+}
+
+.box-counter:hover .box-counter-main {
+	color: #f16583;
+}
+
+.box-counter-main {
+	font-size: 45px;
+	line-height: 1.2;
+	color: #cbd2da;
+	transition: inherit;
+}
+
+.box-counter-main > * {
+	display: inline;
+	font: inherit;
+}
+
+* + .box-counter-title {
+	margin-top: 3px;
+}
+
+* + .box-counter-main {
+	margin-top: 20px;
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+}
+
+
