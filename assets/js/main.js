@@ -61,6 +61,14 @@
     }
   });
 
+  //Get latest tags
+  fetch("https://api.github.com/repos/LiteLDev/LiteLoaderBDS/tags")
+  .then(response => response.json())
+  .then(information => {
+    let LatestTag = $('#latest_tag')
+    LatestTag.text(`LiteLoaderBDS: ${information[0].name}`)
+  });
+
   // Mobile?
   if (browser.mobile) $body.addClass("is-mobile");
   else {
