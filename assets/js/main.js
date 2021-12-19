@@ -44,7 +44,7 @@
         IssuesCounter.text(`${information.open_issues} ошибок(-ки)`)
         break;
       case "ch":
-        IssuesCounter.text(`${information.open_issues}期`)
+        IssuesCounter.text(`${information.open_issues} 个`)
         break;
     }
 
@@ -56,7 +56,7 @@
         StarCounter.text(`${information.stargazers_count} звезд(-ы)`)
         break;
       case "ch":
-        StarCounter.text(`${information.stargazers_count}颗星`)
+        StarCounter.text(`${information.stargazers_count} 颗星`)
         break;
     }
   });
