@@ -1716,6 +1716,11 @@ input[type=radio] + label:before {
   opacity: 1;
 }
 
+#issues_count,
+#star_count {
+  margin-top: 22px;
+}
+
 /* Box */
 .box {
   border-radius: 3px;
