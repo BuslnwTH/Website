@@ -66,7 +66,7 @@
   .then(response => response.json())
   .then(information => {
     let LatestTag = $('#latest_tag')
-    LatestTag.text(`LiteLoaderBDS: ${information[0].name}`)
+    LatestTag.text(LatestTag.text().replace('{version}', information[0].name))
   });
 
   // Mobile?
