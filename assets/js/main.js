@@ -27,6 +27,32 @@
     }, 100);
   });
 
+  // Get Minecraft BDS latest version (from official LiteLoaderBDS repo)
+  fetch('https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/main/Scripts/LINK.txt')
+    .then(response => response.text())
+    .then(bdsurl => {
+      let BdsVersionInfo = $('#latest_bdsver')
+
+      let BdsVersionInfoLanguage = BdsVersionInfo.data('language')
+
+      let BdsVersion = bdsurl.split('/')
+      BdsVersion = BdsVersion[BdsVersion.length - 1].split('-')
+      BdsVersion = BdsVersion[BdsVersion.length - 1].replace('.zip', '')
+
+      switch (BdsVersionInfoLanguage) {
+        case "en":
+          BdsVersionInfo.text(`Support BDS: ${BdsVersion}`)
+          break;
+        case "ru":
+          BdsVersionInfo.text(`Версия BDS: ${BdsVersion}`)
+          break;
+        case "ch":
+          BdsVersionInfo.text(`当前支持BDS: ${BdsVersion}`)
+          break;
+      }
+    })
+
+  // Get information about official repository LiteLoaderBDS
   fetch('https://api.github.com/repos/LiteLDev/LiteLoaderBDS')
     .then(response => response.json())
     .then(information => {
@@ -61,12 +87,12 @@
       }
     });
 
-  //Get latest tags
+  // Get latest version LiteLoaderBDS
   fetch("https://api.github.com/repos/LiteLDev/LiteLoaderBDS/tags")
     .then(response => response.json())
     .then(information => {
       let LatestTag = $('#latest_tag')
-      LatestTag.text(LatestTag.text().replace('{version}', information[0].name))
+      LatestTag.text(`LiteLoader: ${information[0].name}`)
     });
 
   // Mobile?
