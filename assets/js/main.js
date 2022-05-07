@@ -41,7 +41,7 @@
         IssuesCounter.text(`${information.open_issues} issues`)
         break;
       case "ru":
-        IssuesCounter.text(`${information.open_issues} ошибок(-ки)`)
+        IssuesCounter.text(`${information.open_issues} ишью.`)
         break;
       case "ch":
         IssuesCounter.text(`${information.open_issues} 个`)
