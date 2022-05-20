@@ -1,7 +1,7 @@
 /*
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Spectral by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 (function ($) {
@@ -27,47 +27,73 @@
     }, 100);
   });
 
+  // Get Minecraft BDS latest version (from official LiteLoaderBDS repo)
+  fetch('https://raw.githubusercontent.com/LiteLDev/LiteLoaderBDS/main/Scripts/LINK.txt')
+    .then(response => response.text())
+    .then(bdsurl => {
+      let BdsVersionInfo = $('#latest_bdsver')
+
+      let BdsVersionInfoLanguage = BdsVersionInfo.data('language')
+
+      let BdsVersion = bdsurl.split('/')
+      BdsVersion = BdsVersion[BdsVersion.length - 1].split('-')
+      BdsVersion = BdsVersion[BdsVersion.length - 1].replace('.zip', '')
+
+      switch (BdsVersionInfoLanguage) {
+        case "en":
+          BdsVersionInfo.text(`Support BDS: ${BdsVersion}`)
+          break;
+        case "ru":
+          BdsVersionInfo.text(`Версия BDS: ${BdsVersion}`)
+          break;
+        case "ch":
+          BdsVersionInfo.text(`当前支持BDS: ${BdsVersion}`)
+          break;
+      }
+    })
+
+  // Get information about official repository LiteLoaderBDS
   fetch('https://api.github.com/repos/LiteLDev/LiteLoaderBDS')
-  .then(response => response.json())
-  .then(information => {
-    let IssuesCounter = $('#issues_count')
-    let StarCounter = $('#star_count')
+    .then(response => response.json())
+    .then(information => {
+      let IssuesCounter = $('#issues_count')
+      let StarCounter = $('#star_count')
 
-    let IssuesCounterLanguage = IssuesCounter.data('language')
-    let StarCounterLanguage = StarCounter.data('language')
+      let IssuesCounterLanguage = IssuesCounter.data('language')
+      let StarCounterLanguage = StarCounter.data('language')
 
-    switch (IssuesCounterLanguage) {
-      case "en":
-        IssuesCounter.text(`${information.open_issues} issues`)
-        break;
-      case "ru":
-        IssuesCounter.text(`${information.open_issues} ошибок(-ки)`)
-        break;
-      case "ch":
-        IssuesCounter.text(`${information.open_issues} 个`)
-        break;
-    }
+      switch (IssuesCounterLanguage) {
+        case "en":
+          IssuesCounter.text(`${information.open_issues} issues`)
+          break;
+        case "ru":
+          IssuesCounter.text(`${information.open_issues} ишью.`)
+          break;
+        case "ch":
+          IssuesCounter.text(`${information.open_issues} 个`)
+          break;
+      }
 
-    switch (StarCounterLanguage) {
-      case "en":
-        StarCounter.text(`${information.stargazers_count} stars`)
-        break;
-      case "ru":
-        StarCounter.text(`${information.stargazers_count} звезд(-ы)`)
-        break;
-      case "ch":
-        StarCounter.text(`${information.stargazers_count} 颗星`)
-        break;
-    }
-  });
+      switch (StarCounterLanguage) {
+        case "en":
+          StarCounter.text(`${information.stargazers_count} stars`)
+          break;
+        case "ru":
+          StarCounter.text(`${information.stargazers_count} звезд(-ы)`)
+          break;
+        case "ch":
+          StarCounter.text(`${information.stargazers_count} 颗星`)
+          break;
+      }
+    });
 
-  //Get latest tags
+  // Get latest version LiteLoaderBDS
   fetch("https://api.github.com/repos/LiteLDev/LiteLoaderBDS/tags")
-  .then(response => response.json())
-  .then(information => {
-    let LatestTag = $('#latest_tag')
-    LatestTag.text(LatestTag.text().replace('{version}', information[0].name))
-  });
+    .then(response => response.json())
+    .then(information => {
+      let LatestTag = $('#latest_tag')
+      LatestTag.text(`LiteLoader: ${information[0].name}`)
+    });
 
   // Mobile?
   if (browser.mobile) $body.addClass("is-mobile");
