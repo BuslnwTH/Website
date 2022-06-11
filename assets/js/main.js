@@ -19,6 +19,7 @@
     small: ["481px", "736px"],
     xsmall: [null, "480px"],
   });
+  
   // Load language
   WebsiteInternationalization.loadLanguage()
 

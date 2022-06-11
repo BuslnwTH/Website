@@ -1,3 +1,9 @@
+/* 
+    Internationalization for https://litebds.com
+
+    Maded by https://github.com/aye20054925
+*/
+
 class WebsiteInternationalization {
     static avaliableLanguages = [
         {
