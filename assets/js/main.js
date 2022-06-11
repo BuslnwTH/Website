@@ -19,6 +19,20 @@
     small: ["481px", "736px"],
     xsmall: [null, "480px"],
   });
+  // Load language
+  WebsiteInternationalization.loadLanguage()
+
+  // Load avaliable languuages
+  WebsiteInternationalization.getAvaliableLanguages().forEach((language) => {
+    let langItem = $(`<li></li>`)
+      .addClass(`language-${language.lang}`)
+      .append($('<a></a>').text(language.name))
+      .click(() => {
+        localStorage.setItem('selectedLang', language.lang)
+        window.location.reload()
+      })
+    $('#languageMenu').append(langItem)
+  })
 
   // Play initial animations on page load and send request to Github API.
   $window.on("load", function () {
@@ -39,17 +53,7 @@
       BdsVersion = BdsVersion[BdsVersion.length - 1].split('-')
       BdsVersion = BdsVersion[BdsVersion.length - 1].replace('.zip', '')
 
-      switch (BdsVersionInfoLanguage) {
-        case "en":
-          BdsVersionInfo.text(`Support BDS: ${BdsVersion}`)
-          break;
-        case "ru":
-          BdsVersionInfo.text(`Версия BDS: ${BdsVersion}`)
-          break;
-        case "ch":
-          BdsVersionInfo.text(`当前支持BDS: ${BdsVersion}`)
-          break;
-      }
+      BdsVersionInfo.text(`BDS: ${BdsVersion}`)
     })
 
   // Get information about official repository LiteLoaderBDS
