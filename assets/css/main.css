@@ -1513,6 +1513,15 @@ p.major.text {
   margin-top: 30px;
 }
 
+a.header-logo {
+  display: flex !important;
+  align-items: center;
+}
+
+a.header-logo img {
+  width: 32px;
+  margin-right: 10px;
+}
 
 header.major {
   margin: 0 0 3.5em 0;
