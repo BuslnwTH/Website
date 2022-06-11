@@ -2358,6 +2358,21 @@ button,
   max-width: 48em;
   width: 60%;
 }
+.badges {
+  display: flex;
+}
+.badges .badge {
+  width: auto;
+  height: 32px;
+  border-bottom: none;
+  margin-right: 15px;
+}
+.badges .badge img {
+  border-radius: 2px;
+}
+.badges .badge:last-child {
+  margin-right: 0;
+}
 .spotlight:nth-child(2n) {
   -moz-flex-direction: row-reverse;
   -webkit-flex-direction: row-reverse;
@@ -2417,6 +2432,9 @@ button,
     max-width: none;
     text-align: center;
     width: 100%;
+  }
+  .badges {
+    justify-content: center;
   }
 }
 @media screen and (max-width: 736px) {
