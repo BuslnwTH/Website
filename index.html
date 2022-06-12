@@ -11,7 +11,7 @@
   <meta charset="utf-8" />
   <meta name="description" content="New era plugin loader for Bedrock Dedicated Server">
   <meta name="keywords" content="BDS, Bedrock Dedicated Server, Minecraft">
-  <link rel="shortcut icon" href="images/logo-6pndg21x.png" type="image/x-icon">
+  <link rel="shortcut icon" href="images/logo_small.png" type="image/x-icon">
   <meta name="viewport"
     content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -27,17 +27,13 @@
 
     <!-- Header -->
     <header id="header" class="alt">
-      <h1><a href="index.html">LiteLoaderBDS</a></h1>
+      <h1><a href="index.html" class="header-logo"><img src="images/logo_small.png" alt="Logo">LiteLoaderBDS</a></h1>
       <nav id="nav">
         <ul>
           <li class="special">
-            <a href="#menu" class="menuToggle"><span>Language</span></a>
+            <a href="#menu" class="menuToggle"><span id="languageSpan"></span></a>
             <div id="menu">
-              <ul>
-                <li><a href="index.html"><b>»</b> English</a></li>
-                <li><a href="index_zh.html">简体中文</a></li>
-                <li><a href="index_ru.html">Русский язык</a></li>
-              </ul>
+              <ul id="languageMenu"></ul>
             </div>
           </li>
         </ul>
@@ -48,25 +44,81 @@
     <!-- Banner -->
     <section id="banner">
       <div class="inner">
-        <h2><img src="images/c4VATX7.png">
+        <h2><img src="images/logo_large.png" alt="Logo"></h2>
       </div>
       <div class="content">
-        </h2>
-        <p style="font-size:1.25rem">New Era <br />
-          dedicated servers for Minecraft Bedrock<br />
-          Plugin Loader. <br /><br /></p>
+        <p style="font-size: 1.1rem;" id="productDescription"></p>
         <ul class="actions special">
           <li><a class="button icon" id="latest_tag" data-language="en">Loading</a></li>
           <li><a class="button icon" id="latest_bdsver" data-language="en">Loading</a></li>
         </ul>
         <ul class="actions special">
-          <li><a href="https://github.com/LiteLDev/LiteLoaderBDS/releases" class="button primary">Download</a></li>
+          <li><a href="https://github.com/LiteLDev/LiteLoaderBDS/releases" class="button primary" id="downloadButton"></a></li>
         </ul>
       </div>
-      <a href="#two" class="more scrolly">Swipe down</a>
+      <a href="#whatsLlSection" class="more scrolly" id="swipeDown">Swipe down</a>
     </section>
 
-    <section id="one" class="wrapper style1 special">
+    <section id="whatsLlSection" class="wrapper alt style2">
+      <section class="spotlight">
+        <div class="image"><img src="images/pic01.jpg" /></div>
+        <div class="content">
+          <h2 id="whatsLl">What is LiteLoaderBDS?</h2>
+          <p id="whatsLlDescription">
+            <div class="badges">
+              <a href="https://github.com/LiteLDev/LiteLoaderBDS/issues" class="badge">
+                <img src="https://img.shields.io/github/issues/LiteLDev/LiteLoaderBDS?style=for-the-badge" alt="Issues">
+              </a>
+              <a href="https://github.com/LiteLDev/LiteLoaderBDS/stargazers" class="badge">
+                <img src="https://img.shields.io/github/stars/LiteLDev/LiteLoaderBDS?style=for-the-badge" alt="Issues">
+              </a>
+            </div>
+          </p>
+        </div>
+      </section>
+
+      <section class="wrapper style3 special">
+        <div class="inner">
+          <header class="major">
+            <h2 id="benefitsLl"></h2>
+          </header>
+          <ul class="features">
+            <li class="icon solid fa-book">
+              <h3 id="firstBenefit"></h3>
+            </li>
+            <li class="icon solid fa-laptop">
+              <h3 id="secondBenefit"></h3>
+            </li>
+            <li class="icon solid fa-code">
+              <h3 id="thirdBenefit"></h3>
+            </li>
+            <li class="icon solid fa-plug">
+              <h3 id="fourBenefit"></h3>
+            </li>
+            <li class="icon solid fa-shield-alt">
+              <h3 id="fiveBenefit"></h3>
+            </li>
+            <li class="icon solid fa-code-branch">
+              <h3 id="sixBenefit"></h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- <section class="spotlight">
+        <div class="image"><img src="images/pic02.jpg" alt="" /></div>
+        <div class="content">
+          <h2>How to use it?</h2>
+          <p>You can download LiteLoaderBDS from <a href="https://github.com/LiteLDev/LiteLoaderBDS/releases"
+              style="color:#3af6f6 ;text-decoration:none;">Release</a> or <a
+              href="https://github.com/LiteLDev/LiteLoaderBDS/actions"
+              style="color:#3af6f6 ;text-decoration:none;">Actions</a>. If you don't know how to use it, please read
+            README.md</p>
+        </div>
+      </section>
+    </section> -->
+
+    <!-- <section class="wrapper style1 special">
       <div class="inner">
         <header class="major">
           <h2>Github</h2>
@@ -87,76 +139,18 @@
           </li>
         </ul>
       </div>
-    </section>
-
-    <!-- Two -->
-    <section id="two" class="wrapper alt style2">
-      <section class="spotlight">
-        <div class="image"><img src="images/pic01.jpg" /></div>
-        <div class="content">
-          <h2>What is LiteLoaderBDS?</h2>
-          <p>
-            LiteLoader is an unofficial plugin loader that provides basic API support for Bedrock Dedicated Server, with
-            a massive API, lots of packed utility interfaces, a rich event system and powerful basic interface support.
-            <br />
-            Writing plugins in C++, Golang and other languages allows developers to easily extend and customize BDS
-            functionality, making it easy to learn and extremely flexible.
-          </p>
-        </div>
-      </section>
-      <section class="spotlight">
-        <div class="image"><img src="images/pic02.jpg" alt="" /></div>
-        <div class="content">
-          <h2>How to use it?</h2>
-          <p>You can download LiteLoaderBDS from <a href="https://github.com/LiteLDev/LiteLoaderBDS/releases"
-              style="color:#3af6f6 ;text-decoration:none;">Release</a> or <a
-              href="https://github.com/LiteLDev/LiteLoaderBDS/actions"
-              style="color:#3af6f6 ;text-decoration:none;">Actions</a>. If you don't know how to use it, please read
-            README.md</p>
-        </div>
-      </section>
-    </section>
-
-    <!-- Three -->
-    <section id="three" class="wrapper style3 special">
-      <div class="inner">
-        <header class="major">
-          <h2>Benefits LiteLoaderBDS</h2>
-        </header>
-        <ul class="features">
-          <li class="icon solid fa-book">
-            <h3>Full access to all classes and features</h3>
-          </li>
-          <li class="icon solid fa-laptop">
-            <h3>Automatically generated C++ headers</h3>
-          </li>
-          <li class="icon solid fa-code">
-            <h3>Free and easy coding experience</h3>
-          </li>
-          <li class="icon solid fa-plug">
-            <h3>A huge API</h3>
-          </li>
-          <li class="icon solid fa-shield-alt">
-            <h3>Fix some vulnerabilities in BDS to ensure the stability and security of your server</h3>
-          </li>
-          <li class="icon solid fa-code-branch">
-            <h3>Open-source</h3>
-          </li>
-        </ul>
-      </div>
-    </section>
+    </section> -->
 
     <!-- CTA -->
     <section id="cta" class="wrapper style4">
       <div class="inner">
         <header>
-          <h2>Creating plugins for LiteLoader?</h2>
-          <p>You can view the sample for creating a plugin for LiteLoader or view the documentation for the LiteLoader
-            API</p>
+          <h2 id="cpfllHeader">Creating plugins for LiteLoader?</h2>
+          <p id="cpfllDescription"></p>
         </header>
         <ul class="actions stacked">
-          <li><a href="https://github.com/LiteLDev/PluginTemplate" class="button fit primary">DOWNLOAD A SAMPLE</a></li>
-          <li><a href="https://docs.litebds.com/" class="button fit">DOCUMENTATION</a></li>
+          <li><a href="https://github.com/LiteLDev/PluginTemplate" class="button fit primary" id="cpfllSampleDownload"></a></li>
+          <li><a href="https://docs.litebds.com/" class="button fit"  id="cpfllDocumentation"></a></li>
         </ul>
       </div>
     </section>
@@ -170,14 +164,11 @@
               class="label">Telegram</span></a></li>
         <li><a href="https://github.com/LiteLDev/LiteLoaderBDS" class="icon brands fa-github" title="Github"><span
               class="label">Github</span></a></li>
-        <li><a href="https://forum.litebds.com/" class="icon solid fa-comment-alt" title="Forum"><span
-              class="label">Forum</span></a></li>
+        <li><a href="https://github.com/LiteLDev/LiteLoaderBDS/discussions" class="icon solid fa-comment-alt"
+            title="Forum"><span class="label">Forum</span></a></li>
       </ul>
       <ul class="copyright">
-        <p style="font-size:0.7rem">Page not supported by <a href="https://www.mojang.com/" hideFocus="true"
-            style="color:#666666;text-decoration:none;">Mojang Studios</a>,<a href="https://www.microsoft.com/"
-            style="color:#666666;text-decoration:none;">Microsoft</a> or <a href="https://www.minecraftforum.net/"
-            style="color:#666666;text-decoration:none;">Minecraft Forum</a>.</p>
+        <p style="font-size:0.7rem" id="pageNotSupported"></p>
       </ul>
     </footer>
 
@@ -189,6 +180,7 @@
   <script src="assets/js/jquery.scrolly.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
