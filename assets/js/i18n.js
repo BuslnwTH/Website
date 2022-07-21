@@ -39,7 +39,9 @@ class WebsiteInternationalization {
             "cpfllDescription": "You can view the sample for creating a plugin for LiteLoader or view the documentation for the LiteLoader API",
             "cpfllSampleDownload": "Download a sample",
             "cpfllDocumentation": "Documentation",
-            "pageNotSupported": "LiteLoaderBDS not supported by Mojang Studio, Microsoft and Minecraft."
+            "pageNotSupported": "LiteLoaderBDS not supported by Mojang Studio, Microsoft and Minecraft.",
+            "servers": "Servers",
+            "servers_description": "You can see count of servers using LiteLoaderBDS and Players on servers using LiteLoaderBDS"
         },
         "ru": {
             "languageSpan": "Язык",
@@ -59,7 +61,9 @@ class WebsiteInternationalization {
             "cpfllDescription": "Вы можете скачать образец для создания плагина для LiteLoader или просмотреть документацию к LiteLoader API",
             "cpfllSampleDownload": "Скачать образец",
             "cpfllDocumentation": "Документация",
-            "pageNotSupported": "LiteLoaderBDS не поддерживатеся Mojang Studio, Microsoft and Minecraft."
+            "pageNotSupported": "LiteLoaderBDS не поддерживатеся Mojang Studio, Microsoft and Minecraft.",
+            "servers": "Servers",
+            "servers_description": "You can see count of servers using LiteLoaderBDS and Players on servers using LiteLoaderBDS"
         },
         "zh": {
             "languageSpan": "语言",
@@ -79,7 +83,9 @@ class WebsiteInternationalization {
             "cpfllDescription": "你可以查看创建LiteLoader插件的模板，或查看LiteLoader API文档",
             "cpfllSampleDownload": "下载一个开发模板",
             "cpfllDocumentation": "文档",
-            "pageNotSupported": "本页面与MOJANG STUDIOS、MICROSOFT与MINECRAFT论坛无关"
+            "pageNotSupported": "本页面与MOJANG STUDIOS、MICROSOFT与MINECRAFT论坛无关",
+            "servers": "服务器统计",
+            "servers_description": "这里显示了正在使用LiteLoaderBDS的服务器的数量和正在使用LiteLoaderBDS的服务器的玩家总数"
         }
     }
 

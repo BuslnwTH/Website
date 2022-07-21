@@ -58,39 +58,39 @@
     })
 
   // Get information about official repository LiteLoaderBDS
-  fetch('https://api.github.com/repos/LiteLDev/LiteLoaderBDS')
-    .then(response => response.json())
-    .then(information => {
-      let IssuesCounter = $('#issues_count')
-      let StarCounter = $('#star_count')
+  // fetch('https://api.github.com/repos/LiteLDev/LiteLoaderBDS')
+  //   .then(response => response.json())
+  //   .then(information => {
+  //     let IssuesCounter = $('#issues_count')
+  //     let StarCounter = $('#star_count')
 
-      let IssuesCounterLanguage = IssuesCounter.data('language')
-      let StarCounterLanguage = StarCounter.data('language')
+  //     let IssuesCounterLanguage = IssuesCounter.data('language')
+  //     let StarCounterLanguage = StarCounter.data('language')
 
-      switch (IssuesCounterLanguage) {
-        case "en":
-          IssuesCounter.text(`${information.open_issues} issues`)
-          break;
-        case "ru":
-          IssuesCounter.text(`${information.open_issues} ишью.`)
-          break;
-        case "ch":
-          IssuesCounter.text(`${information.open_issues} 个`)
-          break;
-      }
+  //     switch (IssuesCounterLanguage) {
+  //       case "en":
+  //         IssuesCounter.text(`${information.open_issues} issues`)
+  //         break;
+  //       case "ru":
+  //         IssuesCounter.text(`${information.open_issues} ишью.`)
+  //         break;
+  //       case "ch":
+  //         IssuesCounter.text(`${information.open_issues} 个`)
+  //         break;
+  //     }
 
-      switch (StarCounterLanguage) {
-        case "en":
-          StarCounter.text(`${information.stargazers_count} stars`)
-          break;
-        case "ru":
-          StarCounter.text(`${information.stargazers_count} звезд(-ы)`)
-          break;
-        case "ch":
-          StarCounter.text(`${information.stargazers_count} 颗星`)
-          break;
-      }
-    });
+  //     switch (StarCounterLanguage) {
+  //       case "en":
+  //         StarCounter.text(`${information.stargazers_count} stars`)
+  //         break;
+  //       case "ru":
+  //         StarCounter.text(`${information.stargazers_count} звезд(-ы)`)
+  //         break;
+  //       case "ch":
+  //         StarCounter.text(`${information.stargazers_count} 颗星`)
+  //         break;
+  //     }
+  //   });
 
   // Get latest version LiteLoaderBDS
   fetch("https://api.github.com/repos/LiteLDev/LiteLoaderBDS/tags")
@@ -99,6 +99,40 @@
       let LatestTag = $('#latest_tag')
       LatestTag.text(`LiteLoader: ${information[0].name}`)
     });
+
+  // Get running server count
+  fetch("https://bstats.org/api/v1/plugins/15847/charts/servers/data")
+    .then(response => response.json())
+    .then(information => {
+      let ServerCount = $('#server_count')
+      switch (localStorage.getItem('selectedLang')) {
+        case "en":
+          ServerCount.text(`${information[information.length - 1][1]} Servers`)
+          break;
+        case "ru":
+          ServerCount.text(`${information[information.length - 1][1]} серверы`)
+          break;
+        case "zh":
+          ServerCount.text(`${information[information.length - 1][1]} 台服务器`)
+          break;
+      }
+    });
+    fetch("https://bstats.org/api/v1/plugins/15847/charts/players/data")
+      .then(response => response.json())
+      .then(information => {
+        let PlayerCount = $('#player_count')
+      switch (localStorage.getItem('selectedLang')) {
+        case "en":
+          PlayerCount.text(`${information[information.length - 1][1]} Players`)
+          break;
+        case "ru":
+          PlayerCount.text(`${information[information.length - 1][1]} игроки`)
+          break;
+        case "zh":
+          PlayerCount.text(`${information[information.length - 1][1]} 名玩家`)
+          break;
+      }
+      });
 
   // Mobile?
   if (browser.mobile) $body.addClass("is-mobile");
