@@ -41,7 +41,8 @@ class WebsiteInternationalization {
             "cpfllDocumentation": "Documentation",
             "pageNotSupported": "LiteLoaderBDS not supported by Mojang Studio, Microsoft and Minecraft.",
             "servers": "Servers",
-            "servers_description": "You can see count of servers using LiteLoaderBDS and Players on servers using LiteLoaderBDS"
+            "servers_description": "You can see count of servers using LiteLoaderBDS and Players on servers using LiteLoaderBDS",
+            "forumButton": "Forum"
         },
         "ru": {
             "languageSpan": "Язык",
@@ -62,8 +63,9 @@ class WebsiteInternationalization {
             "cpfllSampleDownload": "Скачать образец",
             "cpfllDocumentation": "Документация",
             "pageNotSupported": "LiteLoaderBDS не поддерживатеся Mojang Studio, Microsoft and Minecraft.",
-            "servers": "Servers",
-            "servers_description": "You can see count of servers using LiteLoaderBDS and Players on servers using LiteLoaderBDS"
+            "servers": "Серверы",
+            "servers_description": "Вы можете увидеть количество серверов, использующих LiteLoader BDS, и игроков на серверах, использующих LiteLoader BDS.",
+            "forumButton": "Форум"
         },
         "zh": {
             "languageSpan": "语言",
@@ -85,7 +87,8 @@ class WebsiteInternationalization {
             "cpfllDocumentation": "文档",
             "pageNotSupported": "本页面与MOJANG STUDIOS、MICROSOFT与MINECRAFT论坛无关",
             "servers": "服务器统计",
-            "servers_description": "这里显示了正在使用LiteLoaderBDS的服务器的数量和正在使用LiteLoaderBDS的服务器的玩家总数"
+            "servers_description": "这里显示了正在使用LiteLoaderBDS的服务器的数量和正在使用LiteLoaderBDS的服务器的玩家总数",
+            "forumButton": "论坛"
         }
     }
 
