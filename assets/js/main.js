@@ -77,6 +77,9 @@
   //       case "ch":
   //         IssuesCounter.text(`${information.open_issues} 个`)
   //         break;
+  //       case "th":
+  //         IssuesCounter.text(`${information.open_issues} ปัญหา`)
+  //         break;
   //     }
 
   //     switch (StarCounterLanguage) {
@@ -88,6 +91,9 @@
   //         break;
   //       case "ch":
   //         StarCounter.text(`${information.stargazers_count} 颗星`)
+  //         break;
+  //       case "th":
+  //         StarCounter.text(`${information.stargazers_count} ดาว`)
   //         break;
   //     }
   //   });
@@ -115,6 +121,9 @@
         case "zh":
           ServerCount.text(`${information[information.length - 1][1]} 台服务器`)
           break;
+        case "th":
+          ServerCount.text(`${information[information.length - 1][1]} เซิร์ฟเวอร์`)
+          break;
       }
     });
     fetch("https://bstats.org/api/v1/plugins/15847/charts/players/data")
@@ -130,6 +139,9 @@
           break;
         case "zh":
           PlayerCount.text(`${information[information.length - 1][1]} 名玩家`)
+          break;
+        case "th":
+          PlayerCount.text(`${information[information.length - 1][1]} ผู้เล่น`)
           break;
       }
       });
