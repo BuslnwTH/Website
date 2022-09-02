@@ -18,6 +18,10 @@ class WebsiteInternationalization {
             lang: 'ru',
             name: 'Русский язык'
         },
+        {
+            lang: 'th',
+            name: 'ภาษาไทย'
+        }
     ]
 
     static languagesString = {
@@ -89,6 +93,29 @@ class WebsiteInternationalization {
             "servers": "服务器统计",
             "servers_description": "这里显示了正在使用LiteLoaderBDS的服务器的数量和正在使用LiteLoaderBDS的服务器的玩家总数",
             "forumButton": "论坛"
+        },
+        "th": {
+            "languageSpan": "ภาษา",
+            "productDescription": "ตัวโหลดปลั๊กอินสำหรับ Minecraft BDS",
+            "downloadButton": "ดาวน์โหลด",
+            "swipeDown": "เลื่อนลง",
+            "whatsLl": "LiteLoaderBDS คืออะไร?",
+            "whatsLlDescription": "LiteLoader เป็นตัวโหลดปลั๊กอินอย่างไม่เป็นทางการซึ่งให้การสนับสนุน API พื้นฐานสำหรับ Bedrock Dedicated Server มี API ขนาดใหญ่ แพ็กอินเทอร์เฟซยูทิลิตี้ที่เยอะ รองรับระบบอีเวนต์เพียบ และ รองรับอินเทอร์เฟซพื้นฐานที่ทรงพลัง",
+            "benefitsLl": "ประโยชน์ที่ได้รับจาก LiteLoaderBDS",
+            "firstBenefit": "เข้าถึงคลาสและคุณสมบัติทั้งหมดโดยสมบูรณ์",
+            "secondBenefit": "สร้างส่วนหัวของ C++ อัตโนมัติ",
+            "thirdBenefit": "ประสบการณ์เขียนโค้ดที่ง่ายและฟรี",
+            "fourBenefit": "มี API ขนาดใหญ่",
+            "fiveBenefit": "ความเสถียรและความปลอดภัยของเซิร์ฟเวอร์ของคุณ",
+            "sixBenefit": "โอเพ่นซอร์ส",
+            "cpfllHeader": "กำลังจะสร้างปลั๊กอินสำหรับ LiteLoader?",
+            "cpfllDescription": "คุณสามารถดูตัวอย่างการสร้างปลั๊กอินสำหรับ LiteLoader หรือดูเอกสารกำกับสำหรับ LiteLoader API",
+            "cpfllSampleDownload": "ดาวน์โหลดตัวอย่าง",
+            "cpfllDocumentation": "เอกสารกำกับ",
+            "pageNotSupported": "LiteLoaderBDS ไม่ได้รับการสนับสนุนจาก Mojang Studio, Microsoft และ Minecraft",
+            "servers": "เซิร์ฟเวอร์",
+            "servers_description": "คุณสามารถดูจำนวนเซิร์ฟเวอร์ที่ใช้ LiteLoaderBDS และ ผู้เล่นที่เล่นอยู่บนเซิร์ฟเวอร์ LiteLoaderBDS",
+            "forumButton": "ฟอรั่ม"
         }
     }
 
